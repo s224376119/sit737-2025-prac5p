@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  simpleserver:
+    build: .
+    container_name: simple-express-server
+    ports:
+      - "3000:3000"
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
