@@ -5,7 +5,7 @@ const port = 3000;
 
 app.get('/', (reg,res)=> {
 
-    res.send("Welcome");
+    res.send("Welcome to the updated application");
 
 
 }
